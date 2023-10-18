@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/RNHQDmZ/pexels-diogo-cacito-13038487.jpg",
+      "name": "Honda"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/gSxxvWG/pexels-pixabay-258083.jpg",
+      "name": "Tesla"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/CPc2XsR/b92bf19612e524ac1f9d5e998770eba7.jpg",
+      "name": "Mercedes-Benz"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/KVX2mjd/pexels-luis-quintero-3689532.jpg",
+      "name": "BMW"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/MpFzx7G/pexels-juan-montes-9845373.jpg",
+      "name": "Ford"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/YPLWGTN/pexels-erik-mclean-17357680.jpg",
+      "name": "Toyota"
+    }
+  ]
+  

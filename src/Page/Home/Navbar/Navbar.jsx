@@ -16,23 +16,23 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
+      <li className="mx-3 text-lg">
         <NavLink to="/">Home</NavLink>
       </li>
       
-      <li>
+      <li className="mx-3 text-lg">
             <NavLink to="/shop">Shop</NavLink>
         </li>
-      <li>
-        <NavLink to="/contact">My Cart</NavLink>
+      <li className="mx-3 text-lg">
+        <NavLink to="/addProduct">My Cart</NavLink>
       </li>
       {user && (
         <div className="flex">
-          <li>
+          <li className="mx-3 text-lg">
             <NavLink to="/Portfolio">Portfolio</NavLink>
           </li>
-          <li>
-        <NavLink to="/blog">Add product</NavLink>
+          <li className="mx-3 text-lg">
+        <NavLink to="/addProduct">Add product</NavLink>
       </li>
         </div>
       )}

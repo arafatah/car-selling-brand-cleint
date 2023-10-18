@@ -4,6 +4,7 @@ import MainLayout from "../Layouts/MainLayout";
 import ErrorElement from "../Components/ErrorElement/ErrorElement";
 import Login from "../Page/Login/Login";
 import Register from "../Page/Register/Register";
+import AddProduct from "../Page/Home/Navbar/AddProduct/AddProduct";
 
 const Routes = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const Routes = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register />
+            },
+            {
+                path: "/addProduct",
+                element: <AddProduct />
             }
 
         ]
