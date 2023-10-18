@@ -28,8 +28,8 @@ const BannerSlider = () => {
                 className="opacity-40 object-cover md:h-[770px]" // Adjust opacity here
               />
               <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2">
-                <h3 className="text-sky-300 text-5xl font-bold mb-2">Drive Your Dreams</h3>
-                <h3 className="text-lime-300 text-2xl font-medium mb-2">Unleash the Power of Choice - Drive Your Dreams Today</h3>
+                <h3 className="text-sky-300 text-3xl md:text-5xl md:font-bold mb-2">Drive Your Dreams</h3>
+                <h3 className="text-lime-300 text-base md:text-2xl md:font-medium mb-2">Unleash the Power of Choice - Drive Your Dreams Today</h3>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-full">
                   Learn More
                 </button>
