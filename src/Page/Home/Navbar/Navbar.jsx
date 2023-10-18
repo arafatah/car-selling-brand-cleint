@@ -24,6 +24,9 @@ const Navbar = () => {
             <NavLink to="/shop">Shop</NavLink>
         </li>
       <li className="mx-3 text-lg">
+            <NavLink to="/showProduct">Show product</NavLink>
+        </li>
+      <li className="mx-3 text-lg">
         <NavLink to="/addProduct">My Cart</NavLink>
       </li>
       {user && (
