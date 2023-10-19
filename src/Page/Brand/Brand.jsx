@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+
 const Brand = ({ brand }) => {
 
   const { image, name } = brand;
+  const {setCards} = useContext(AuthContext);
 
   return (
     <div>
@@ -15,7 +20,9 @@ const Brand = ({ brand }) => {
         <div className="card-body items-center text-center">
           <h2 className="card-title">{name}</h2>
           <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
+            <Link onClick={() => setCards(name)} to="/brandDetails">
+            <button className="btn btn-primary">Explore More</button>
+            </Link>
           </div>
         </div>
       </div>

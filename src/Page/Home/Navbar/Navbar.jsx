@@ -49,7 +49,7 @@ const Navbar = () => {
             <h2 className="flex justify-center items-center">
                 <FaPhone className="text-4xl"></FaPhone>
                 <div className="ml-4">
-                    <p>call us now</p>
+                    <p>Call Us Now</p>
                     <p>+880 1711 111 111</p>
                 </div>
             </h2>
