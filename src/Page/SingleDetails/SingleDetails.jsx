@@ -5,28 +5,36 @@ import Swal from "sweetalert2";
 
 const SingleDetails = () => {
   const car = useLoaderData();
+  console.log(car);
 
   const addToCart = () => {
-    // Send a request to your backend to add the car to the user's cart
-    fetch(`http://localhost:5000/cart/add`, {
+    fetch(`http://localhost:5000/cart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(car), 
+      body: JSON.stringify(car),
     })
-      .then((response) => response.json())
+      .then((response) => {
+         response.json();
+      })
       .then((data) => {
         console.log("Added to cart:", data);
         Swal.fire({
-            title: "Added to cart",
-            text: "Product added to cart successfully",
-            icon: "success",
-            confirmButtonText: "Cool",
-            });
+          title: "Added to cart",
+          text: "Product added to cart successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
       })
       .catch((error) => {
         console.error("Error adding to cart:", error);
+        Swal.fire({
+          title: "Error",
+          text: "An error occurred while adding the product to the cart",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
       });
   };
   return (
@@ -47,9 +55,10 @@ const SingleDetails = () => {
           <p className="text-gray-600 mb-2">{car.shortDetails}</p>
           <div className="flex justify-between items-center mt-4">
             <p className="text-lg text-blue-600">${car.price}</p>
-            <button 
-            onClick={addToCart}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full">
+            <button
+              onClick={addToCart}
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full"
+            >
               Add to Cart
             </button>
           </div>

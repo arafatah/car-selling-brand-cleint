@@ -11,7 +11,6 @@ import SingleDetails from "../Page/SingleDetails/SingleDetails";
 import UpdateProduct from "../Page/UpdateProduct/UpdateProduct";
 import PrivetRoute from "./PrivetRoute";
 import Cart from "../Page/Cart/Cart";
-import CartPage from "../Page/CartPage/CartPage";
 
 const Routes = createBrowserRouter([
     {
@@ -56,7 +55,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "/myCart",
-                element: <CartPage/>
+                element: <Cart/>,
             }
 
         ]
