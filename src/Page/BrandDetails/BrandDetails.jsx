@@ -21,9 +21,12 @@ const BrandDetails = () => {
             <div>
                 <Navbar></Navbar>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {
                 names.map(mainName => <BrandDetail mainName={mainName} key={mainName.name}></BrandDetail>)
             }
+
+            </div>
         </div>
     );
 };

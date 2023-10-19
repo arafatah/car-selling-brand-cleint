@@ -7,6 +7,9 @@ import Register from "../Page/Register/Register";
 import AddProduct from "../Page/Home/Navbar/AddProduct/AddProduct";
 import ShowProduct from "../Page/ShowProduct/ShowProduct";
 import BrandDetails from "../Page/BrandDetails/BrandDetails";
+import SingleDetails from "../Page/SingleDetails/SingleDetails";
+import UpdateProduct from "../Page/UpdateProduct/UpdateProduct";
+import PrivetRoute from "./PrivetRoute";
 
 const Routes = createBrowserRouter([
     {
@@ -28,7 +31,12 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "/addProduct",
-                element: <AddProduct />
+                element: <PrivetRoute><AddProduct /></PrivetRoute> 
+            },
+            {
+                path: "updateProduct/:id",
+                element: <PrivetRoute><UpdateProduct></UpdateProduct></PrivetRoute> ,
+                loader: ( {params} ) => fetch(`http://localhost:5000/cars/${params.id}`)
             },
             {
                 path: "/showProduct",
@@ -38,6 +46,11 @@ const Routes = createBrowserRouter([
             {
                 path: "/brandDetails",
                 element: <BrandDetails></BrandDetails>
+            },
+            {
+                path: "/singleDetails/:id",
+                element: <SingleDetails></SingleDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
             }
 
         ]

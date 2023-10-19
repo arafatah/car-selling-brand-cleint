@@ -1,7 +1,8 @@
-import React from "react";
+
+import { Link } from "react-router-dom";
 
 const BrandDetail = ({ mainName }) => {
-  const { image, brandName, name, price, type, shortDescription, rating } = mainName;
+  const {_id, image, brandName, name, price, type, shortDescription, rating } = mainName;
 
   return (
     <div className="bg-white rounded-lg p-4 shadow-md mb-4">
@@ -9,7 +10,7 @@ const BrandDetail = ({ mainName }) => {
         <img
           src={image}
           alt={name}
-          className="object-cover rounded-lg"
+          className="object-cover rounded-lg h-96 w-full"
         />
       </div>
       <h3 className="text-lg font-semibold">{name}</h3>
@@ -19,6 +20,15 @@ const BrandDetail = ({ mainName }) => {
       <div className="flex justify-between">
         <p className="text-xl text-blue-600">${price}</p>
         <p className="text-yellow-500">{rating} ★</p>
+      </div>
+      <div className="mt-9 flex gap-5 justify-end">
+        <Link to={`/singleDetails/${_id}`}>
+            <button className="btn">Details</button>
+        </Link>
+        <Link to={`/updateProduct/${_id}`}>
+            <button className="btn">Update</button>
+        </Link>
+
       </div>
     </div>
   );
