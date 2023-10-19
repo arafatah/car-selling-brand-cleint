@@ -10,6 +10,8 @@ import BrandDetails from "../Page/BrandDetails/BrandDetails";
 import SingleDetails from "../Page/SingleDetails/SingleDetails";
 import UpdateProduct from "../Page/UpdateProduct/UpdateProduct";
 import PrivetRoute from "./PrivetRoute";
+import Cart from "../Page/Cart/Cart";
+import CartPage from "../Page/CartPage/CartPage";
 
 const Routes = createBrowserRouter([
     {
@@ -51,6 +53,10 @@ const Routes = createBrowserRouter([
                 path: "/singleDetails/:id",
                 element: <SingleDetails></SingleDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+            },
+            {
+                path: "/myCart",
+                element: <CartPage/>
             }
 
         ]

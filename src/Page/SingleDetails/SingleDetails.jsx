@@ -1,10 +1,34 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Home/Navbar/Navbar";
+import Swal from "sweetalert2";
 
 const SingleDetails = () => {
   const car = useLoaderData();
 
+  const addToCart = () => {
+    // Send a request to your backend to add the car to the user's cart
+    fetch(`http://localhost:5000/cart/add`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(car), 
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Added to cart:", data);
+        Swal.fire({
+            title: "Added to cart",
+            text: "Product added to cart successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+            });
+      })
+      .catch((error) => {
+        console.error("Error adding to cart:", error);
+      });
+  };
   return (
     <div>
       <Navbar />
@@ -23,7 +47,9 @@ const SingleDetails = () => {
           <p className="text-gray-600 mb-2">{car.shortDetails}</p>
           <div className="flex justify-between items-center mt-4">
             <p className="text-lg text-blue-600">${car.price}</p>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full">
+            <button 
+            onClick={addToCart}
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full">
               Add to Cart
             </button>
           </div>

@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "logo": "https://i.ibb.co/SVQkKjN/5124556.jpg",
+      "title": "Customer service",
+      "description": "lorem ipsum dolor sit"
+    },
+    {
+      "id": "2",
+      "logo": "https://i.ibb.co/sVt2M4X/Mail-sent.jpg",
+      "title": "Fasted Delivery",
+      "description": "lorem ipsum dolor sit"
+    },
+    {
+      "id": "3",
+      "logo": "https://i.ibb.co/N14Mx67/58877.jpg",
+      "title": "Online payment",
+      "description": "lorem ipsum dolor sit"
+    },
+    {
+      "id": "4",
+      "logo": "https://i.ibb.co/YLYKk5D/pngegg.png",
+      "title": "Big saving",
+      "description": "lorem ipsum dolor sit "
+    }
+  ]
