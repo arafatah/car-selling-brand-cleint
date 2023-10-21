@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Components/AuthProvider/AuthProvider";
 import { useContext } from "react";
-import { FaPhone,FaCartShopping } from "react-icons/fa6";
+import { FaPhone, FaCartShopping } from "react-icons/fa6";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -19,25 +19,17 @@ const Navbar = () => {
       <li className="mx-3 text-lg">
         <NavLink to="/">Home</NavLink>
       </li>
-      
       <li className="mx-3 text-lg">
-            <NavLink to="/shop">Shop</NavLink>
-        </li>
-      <li className="mx-3 text-lg">
-            <NavLink to="/showProduct">Show product</NavLink>
-        </li>
-        <li className="mx-3 text-lg">
-          <NavLink to="/myCart">My Cart</NavLink>
-        </li>
-
+        <NavLink to="/myCart">My Cart</NavLink>
+      </li>
       {user && (
         <div className="flex">
           <li className="mx-3 text-lg">
-            <NavLink to="/Portfolio">Portfolio</NavLink>
+            <NavLink to="/showProduct">Show All Product</NavLink>
           </li>
           <li className="mx-3 text-lg">
-        <NavLink to="/addProduct">Add product</NavLink>
-      </li>
+            <NavLink to="/addProduct">Add product</NavLink>
+          </li>
         </div>
       )}
     </>
@@ -45,25 +37,24 @@ const Navbar = () => {
 
   return (
     <div>
-        <div className="bg-slate-700 py-5">
+      <div className="bg-slate-700 py-5">
         <div className="flex justify-end container mx-auto text-white">
-            <h2 className="flex justify-center items-center">
-                <FaPhone className="text-4xl"></FaPhone>
-                <div className="ml-4">
-                    <p>Call Us Now</p>
-                    <p>+880 1711 111 111</p>
-                </div>
-            </h2>
-            <h2 className="flex justify-center items-center ml-5">
-                <FaCartShopping className="text-4xl"></FaCartShopping>
-                <div className="ml-4">
-                <p>CheckOut</p>
-                <p>0 Item</p>
+          <h2 className="flex justify-center items-center">
+            <FaPhone className="text-4xl"></FaPhone>
+            <div className="ml-4">
+              <p>Call Us Now</p>
+              <p>+880 1711 111 111</p>
             </div>
-            
-            </h2>
+          </h2>
+          <h2 className="flex justify-center items-center ml-5">
+            <FaCartShopping className="text-4xl"></FaCartShopping>
+            <div className="ml-4">
+              <p>CheckOut</p>
+              <p>0 Item</p>
+            </div>
+          </h2>
         </div>
-        </div>
+      </div>
       <div className="navbar bg-base-100 container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -91,12 +82,12 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <div className="relative w-14 md:w-64 w-3">
-            <img
+            <div className="relative w-14 md:w-64">
+              <img
                 className="md:-mt-20 bg-slate-700  transform skew-x-[-20deg] md:w-full md:h-auto"
-              src="https://i.ibb.co/tphCn8J/logo-586ba9e1-83ed-4bb2-83c7-816815964de9-190x120-1.png"
-              alt=""
-            />
+                src="https://i.ibb.co/tphCn8J/logo-586ba9e1-83ed-4bb2-83c7-816815964de9-190x120-1.png"
+                alt=""
+              />
             </div>
           </Link>
         </div>

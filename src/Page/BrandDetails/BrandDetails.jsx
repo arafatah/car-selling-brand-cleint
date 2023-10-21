@@ -8,7 +8,7 @@ const BrandDetails = () => {
     const [names, setNames] = useState([]); 
 
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://back-end-sand-tau.vercel.app/cars')
             .then(res => res.json())
             .then(data => {
                 const filteredCards = data.filter(card => cards.includes(card.brandName));

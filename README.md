@@ -1,8 +1,11 @@
-# React + Vite
+# Automobile Car selling website
+Here is my 5 usage of website. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Here you can check the product by brand name. 
+- You can add product in your cart and check them in cart also. 
+- Have login/register system with firebase.
+- User who logged in, if they want they can add product.
+- If they want to Update the product they can do this.
+- If logged user want they can sign out simply by click on sign out button
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Website live link: https://car-selling-001.web.app

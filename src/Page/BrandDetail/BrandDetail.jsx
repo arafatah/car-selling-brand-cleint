@@ -10,7 +10,7 @@ const BrandDetail = ({ mainName }) => {
         <img
           src={image}
           alt={name}
-          className="object-cover rounded-lg h-96 w-full"
+          className="object-cover rounded-lg md:h-96 w-full"
         />
       </div>
       <h3 className="text-lg font-semibold">{name}</h3>

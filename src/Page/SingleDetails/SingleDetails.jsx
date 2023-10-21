@@ -1,19 +1,27 @@
-import React from "react";
+import  { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Home/Navbar/Navbar";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 const SingleDetails = () => {
+  const {user} = useContext(AuthContext);
+  console.log(user.email);
   const car = useLoaderData();
-  console.log(car);
+  // console.log(car);
+  car['email'] = user.email;
+  let newObject = Object.assign({}, car);
+  delete newObject._id;
+  console.log(newObject);
+  
 
   const addToCart = () => {
-    fetch(`http://localhost:5000/cart`, {
+    fetch(`https://back-end-sand-tau.vercel.app/cart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(car),
+      body: JSON.stringify(newObject),
     })
       .then((response) => {
          response.json();

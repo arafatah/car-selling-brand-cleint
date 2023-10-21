@@ -30,7 +30,7 @@ const UpdateProduct = () => {
             image
         };
 
-        fetch(`http://localhost:5000/cars/${_id}`, { 
+        fetch(`https://back-end-sand-tau.vercel.app/cars/${_id}`, { 
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(product)

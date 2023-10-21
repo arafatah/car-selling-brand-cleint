@@ -37,12 +37,12 @@ const Routes = createBrowserRouter([
             {
                 path: "updateProduct/:id",
                 element: <PrivetRoute><UpdateProduct></UpdateProduct></PrivetRoute> ,
-                loader: ( {params} ) => fetch(`http://localhost:5000/cars/${params.id}`)
+                loader: ( {params} ) => fetch(`https://back-end-sand-tau.vercel.app/cars/${params.id}`)
             },
             {
                 path: "/showProduct",
-                element: <ShowProduct />,
-                loader: () => fetch('http://localhost:5000/cars')
+                element: <PrivetRoute><ShowProduct /></PrivetRoute>,
+                loader: () => fetch('https://back-end-sand-tau.vercel.app/cars')
             },
             {
                 path: "/brandDetails",
@@ -50,12 +50,12 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "/singleDetails/:id",
-                element: <SingleDetails></SingleDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+                element: <PrivetRoute><SingleDetails></SingleDetails></PrivetRoute>,
+                loader: ({params}) => fetch(`https://back-end-sand-tau.vercel.app/cars/${params.id}`)
             },
             {
                 path: "/myCart",
-                element: <Cart/>,
+                element: <PrivetRoute><Cart/></PrivetRoute> ,
             }
 
         ]
